@@ -1,0 +1,11 @@
+body {
+    background-color: rgba(40, 40, 40, 0.7 );
+}
+
+.caption-full {
+    padding: 9px;
+}
+
+#delete-form {
+    display: inline;
+}

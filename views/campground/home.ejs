@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="jumbotron">
+        <div>
+            <h1>WELCOME TO YELPCAMP</h1>
+            <p>World's bestcamp-sites Handpicked for you.</p>
+            <a href="campground/new">
+            <button class="btn btn-lg btn-primary"> ADD New CAMP</button>
+            </a>
+        </div>    
+    </div> 
+    <div class="row text-center" style="display:flex ; flex-wrap:wrap;">
+        <%data.forEach(function(team){%>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%=team.image %>" >
+                    <div class="caption">
+                        <h4><%= team.name %></h4>
+                    </div>
+                    <div class="text-center">
+                        <a href="/campground/<%= team._id %>" class="btn btn-primary" >MORE INFO</a>
+                    </div>
+                </div>
+            </div>
+        <% } ); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
